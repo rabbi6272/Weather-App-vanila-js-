@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-green-50">
+    <div
+      class="wrapper rounded-xl bg-gray-100"
+    >
+      <div
+        class="input "
+      >
+        <input
+          type="text"
+          id="city"
+          class="city"
+          placeholder="Enter City Name"
+        />
+        <button
+          class="bg-cyan-500 hover:bg-cyan-600"
+          id="submit">
+          search
+        </button>
+      </div>
+      <div class="responce text-center">
+              <div class="div-1">
+
+                <h2 class="city-name"> <span id="city-name">Khulna</span> <span id="country">BD</span></h2><br>
+                <h3 id="date-time">Friday, May 24, 2024</h3>
+              </div>
+              <div class="div-2">
+                <h1 id="temp-container"> <span id="temp">33</span>°C</h1>
+                <br />
+                <h3 id="description">wind</h3>
+                <h3 class="feelsLike">Feels like: <span id="feelsLike">40</span>°C</h3>
+                <span class="flex justify-evenly min-max">
+                  <h3>
+                    Min: <span id="tempMin">20</span>°C
+                  </h3>
+                  <h3>
+                    Max: <span id="tempMax">35</span>°C
+                  </h3>
+                </span>
+                <span class="flex justify-evenly min-max">
+                  <h3>Humidity: <span id="humidity">31</span>%</h3>
+                  <h3>Wind: <span id="wind">2.23</span>km/h</h3>
+                </span>
+                <div class="img-container">
+                  <img src="http://openweathermap.org/img/wn/02d@2x.png" id="img"/>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

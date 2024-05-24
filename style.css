@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f0f0f0;
+    display: grid;
+    place-items: center;
+    font-family: Nunito;
+    transition: .5s all;
+}
+.wrapper{
+    width: 30%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05);
+}
+.input{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.city {
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    font-size: medium;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #06b6d4;
+}
+.input input:focus{
+    outline: none;
+}
+.input button{
+    font-family: Montserrat;
+    font-weight: 500;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.input button:active{
+    scale: .9;
+}
+.responce{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.city-name{
+    font-size: 3rem;
+    font-family: Nunito;
+    display: inline;
+    position: relative;
+}
+#country {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    font-size: medium;
+}
+#temp-container{
+    font-size: 2rem;
+}
+#date-time{
+    font-size: small;
+    margin-bottom: 15px;
+}
+
+.div-1,
+.div-2,
+.div-3 {
+  width: 100%;
+}
+.img-container{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invalid-city{
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+@media (max-width: 1200px){
+    .wrapper{
+        width: 40%;
+    }
+}
+@media (max-width: 992px){
+    .wrapper{
+        width: 50%;
+    }
+}
+@media (max-width: 768px) {
+    .wrapper{
+        width: 90%;
+        height: 70%;
+    }
+    .input{
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 10px 0;
+    }
+    .input input{
+        width: 90%;
+    }
+    .city-name{
+        font-size: 2.5rem;
+    }
+    img{
+        width: 120px;
+    }
+}
