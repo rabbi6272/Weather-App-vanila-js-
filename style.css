@@ -3,7 +3,7 @@ body{
     margin: 0;
     height: 100vh;
     width: 100vw;
-    background-color: #f0f0f0;
+    background:linear-gradient(135deg, #a7f3d0, #dcfce7);
     display: grid;
     place-items: center;
     font-family: Nunito;
@@ -11,7 +11,7 @@ body{
 }
 .wrapper{
     width: 30%;
-    height: 80%;
+    height: 75%;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -68,6 +68,7 @@ body{
 .city-name{
     font-size: 3rem;
     font-family: Nunito;
+    line-height: 1;
     display: inline;
     position: relative;
 }
@@ -79,6 +80,7 @@ body{
 }
 #temp-container{
     font-size: 2rem;
+    margin-bottom: 5px;
 }
 #date-time{
     font-size: small;
@@ -90,8 +92,11 @@ body{
 .div-3 {
   width: 100%;
 }
+.humidity{
+    margin-bottom: 10px;
+}
 .img-container{
-    width: 100%;
+    width: 95%;
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -128,6 +133,9 @@ body{
     }
     .city-name{
         font-size: 2.5rem;
+    }
+    .humidity{
+        margin-bottom: 5px;
     }
     img{
         width: 120px;

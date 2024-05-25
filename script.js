@@ -19,14 +19,15 @@ const date = new Intl.DateTimeFormat("en-US", {
 }).format(now);
 
 function implementData(data){
+    document.querySelector('input').value='';
     dateTime.textContent = date;
     city.textContent= data.name;
     country.textContent= data.sys.country;
-    temp.textContent= data.main.temp;
+    temp.textContent= Math.trunc(data.main.temp);
     description.textContent= data.weather[0].description;
     feelsLike.textContent= data.main.feels_like;
-    min.textContent= data.main.temp_min;
-    max.textContent= data.main.temp_max;
+    min.textContent= Math.trunc(data.main.temp_min);
+    max.textContent=  Math.trunc(data.main.temp_max);
     humidity.textContent= data.main.humidity;
     wind.textContent= data.wind.speed;
     let src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
@@ -36,7 +37,7 @@ function implementData(data){
 async function getWeather() {
     let city = document.getElementById("city").value;
     if(city){
-        let url = `http://api.openweathermap.org/data/2.5/weather?appid=bbe7d4cf002908df2b1cf82e3d4a947e&units=metric&q=${city}`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?appid=bbe7d4cf002908df2b1cf82e3d4a947e&units=metric&q=${city}`;
         let res = await fetch(url);
         console.log(res);
         if(res.status == 200){
