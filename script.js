@@ -14,7 +14,7 @@ let dateTime = document.getElementById("date-time");
 
 let now = new Date();
 const date = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "full",  
+    dateStyle: "medium",  
     timeStyle: "short",
 }).format(now);
 
@@ -25,13 +25,14 @@ function implementData(data){
     country.textContent= data.sys.country;
     temp.textContent= Math.trunc(data.main.temp);
     description.textContent= data.weather[0].description;
-    feelsLike.textContent= data.main.feels_like;
+    feelsLike.textContent= Math.trunc(data.main.feels_like);
     min.textContent= Math.trunc(data.main.temp_min);
     max.textContent=  Math.trunc(data.main.temp_max);
     humidity.textContent= data.main.humidity;
     wind.textContent= data.wind.speed;
     let src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
     img.src= src;
+    document.querySelector('.responce').style.opacity = 1;
 }
 
 async function getWeather() {

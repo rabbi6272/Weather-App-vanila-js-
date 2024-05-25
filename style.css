@@ -7,7 +7,7 @@ body{
     display: grid;
     place-items: center;
     font-family: Nunito;
-    transition: .5s all;
+    transition: 1s all;
 }
 .wrapper{
     width: 30%;
@@ -64,6 +64,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
 }
 .city-name{
     font-size: 3rem;
